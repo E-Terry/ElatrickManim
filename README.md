@@ -2,4 +2,4 @@
  
  This is for us screwing around with Manim
 
- Patrick SUcks
+ Patrick is a very nice fellow
