@@ -23,7 +23,7 @@ class DrawCircuit(Scene):
     circ.connect(batt.get_left(),cap.get_left())
     circ.render()
 
-    t = Tex(r"suck it patrick I can even do \LaTeX \; if I want")
+    t = Tex(r"Suck it Patrick I can even do \LaTeX \; if I want")
     t.shift(UP*3)
     
     resLabel = Text("Resistor")
