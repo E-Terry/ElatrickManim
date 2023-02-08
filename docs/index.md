@@ -226,7 +226,6 @@ meters first. Notice that $10\mu\text{m}=10^{-5}$m
 
 $$\begin{aligned}
         F&=\frac{kq_1q_2}{r^2}\\
-        &=\frac{\left(8.987\times10^9\right)\left(-1.6\times10^{-19}\right)\left(1.6\times10^{-19}\right)}{{\left(10^{-5}\right)}^2}\\
         &\approx-2.301\times10^{-18} \; N\\
     
 \end{aligned}$$
