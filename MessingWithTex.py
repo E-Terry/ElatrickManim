@@ -23,11 +23,11 @@ class DrawCircuit(Scene):
     circ.connect(batt.get_left(),cap.get_left())
     circ.render()
 
-    t = Tex(r"Suck it Patrick I can even do \LaTeX \; if I want")
+    t = Tex("Suck it Patrick I can even do \LaTeX \; if I want")
     t.shift(UP*3)
     
     resLabel = Text("Resistor")
-    resLabel.shift(UP*2)
+    resLabel.shift(UP)
 
     
     self.play(Create(batt),Create(res),Create(cap),Create(ind), Create(circ), run_time=3)
