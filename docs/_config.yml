@@ -8,8 +8,5 @@ header-includes:
 - |
   ```{=latex}
   \usepackage{tcolorbox}
-  \newtcolorbox{norm-box}{colback=gray!5!white,arc=0pt,outer arc=0pt,colframe=gray!60!black}
-  \newtcolorbox{info-box}{colback=cyan!5!white,arc=0pt,outer arc=0pt,colframe=cyan!60!black}
-  \newtcolorbox{warn-box}{colback=orange!5!white,arc=0pt,outer arc=0pt,colframe=orange!80!black}
-  \newtcolorbox{error-box}{colback=red!5!white,arc=0pt,outer arc=0pt,colframe=red!75!black}
-  \newtcolorbox{attn-box}{colback=green!5!white,arc=0pt,outer arc=0pt,colframe=green!75!black}
+  \newtcolorbox{mybox}{colback=red!5!white,arc=0pt,outer arc=0pt,colframe=red!75!black}
+  \newtcolorbox{practicebox}{colback=green!5!white,arc=0pt,outer arc=0pt,colframe=green!75!black}
