@@ -217,7 +217,7 @@ means we need to convert from $30\mu$m to $3\times10^{-19}$ meters.
 
 $$\begin{aligned}
         F&=\frac{kq_1q_2}{r^2}\\
-        &=\frac{\left(8.987\times10^9\right)\left(-1.6\times10^{-19}\right)\left(1.6\times10^{-19}\right)}{{\left(3\times10^{-5}\right)}^2}\\
+        &=\frac{\left(8.987\times10^9\right)\left(-1.6\times10^{-19}\right)\left(1.6\times10^{-19}\right)}{{\left(3\times10^{-5}\right)^2}}\\
         &\approx -2.556\times10^{-19} \; N \\
     
 \end{aligned}$$
