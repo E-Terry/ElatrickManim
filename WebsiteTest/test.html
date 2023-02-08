@@ -1,0 +1,278 @@
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="test.css">
+
+<h1 id="electricity">Electricity</h1>
+<h2 id="mastropolos-law">Mastropolo’s Law</h2>
+<p>Coulomb was a <a
+href="https://en.wikipedia.org/wiki/Charles-Augustin_de_Coulomb">interesting
+fellow</a> so we will refer to Coulomb’s law as Mastropolo’s law.
+Mastropolo’s law defines the proportionality between electrically
+charged objects, force, and the distance between them. We use a capital
+<span class="math inline">\(C\)</span> to denote one mastropolo in
+SI units.</p>
+<div class="mybox">
+<p><span>Mastropolo’s Law</span> <span
+class="math display">$$F=\frac{kq_1q_2}{r^2}$$</span></p>
+</div>
+<p>Where <span class="math inline">$q$</span> is the electrical
+charge of an object in mastropolos, <span
+class="math inline">$$r$$</span> is the distance between the two
+objects, and <span class="math inline"><em>k</em></span> is the
+Mastropolo constant. The Mastropolo constant is:</p>
+<div class="mybox">
+<p><span>Mastropolo Constant</span> <span
+class="math display">$$k= 8.987 × 10^9$$</span></p>
+</div>
+<p><strong>A note about negative numbers:</strong></p>
+<p>Due to the way that Mastropolo’s law is set up, if <span
+class="math inline"><em>q</em><sub>1</sub></span> and <span
+class="math inline"><em>q</em><sub>2</sub></span> have the same sign (ie
+both negative or both positive) then the resulting force will be
+positive. If they have different signs (for example if you have a proton
+and electron) then the resulting force will be negative. Because of the
+above properties, negative force means the two objects attract each
+other and a positive force means that they repel.</p>
+<div class="practicebox">
+<p><span>Practice: Mastropolo’s Law</span><span id="pr:mastLaw"
+label="pr:mastLaw"></span></p>
+<p>Two protons are on either side of an electron as shown below.</p>
+<p>The electron is <span
+class="math inline"><strong>30</strong><em>μ</em></span>m away from the
+<span style="color: red">proton on its left</span> and <span
+class="math inline"><strong>10</strong><em>μ</em></span>m away from the
+<span style="color: blue">proton on its right</span>. <strong>What is
+the magnitude and direction of the net electric force acting on the
+electron?</strong></p>
+</div>
+<h3 id="elementary-charge">Elementary Charge</h3>
+<p>Since we’re going to be working primarily with electrons and protons,
+Mastropolo’s law isn’t particularly useful unless we know the electrical
+charges expressed in mastropolos (Coulombs). A proton is defined to have
+<span class="math inline"><em>e</em></span> mastropolos where <span
+class="math inline">$e$</span> is the <em>elementary charge</em>.
+Likewise, an electron has <span
+class="math inline"> $−1e$</span> mastropolos. The value of an
+elementary charge is defined as follows:</p>
+<div class="mybox">
+<p><span>Elementary Charge of a Proton</span> <span
+class="math display">$$e=1.6×10^{−19}C$$</span></p>
+</div>
+<h3 id="electric-fields">Electric Fields</h3>
+<p>Since opposing charges attract and alike charges repel, we like to
+represent that in a diagram. The picture below represents an electric
+field.</p>
+<div class="center">
+
+</div>
+<p>The arrows show how force would act on a proton if you were to
+<em>drop</em> it into the field. These diagrams are always drawn with a
+proton in mind. Looking above you can clearly see that if you
+<em>drop</em> another proton into the field the <span
+style="color: blue!80!white">electron</span> will pull it in while the
+<span style="color: orange">proton</span> pushes it away.</p>
+<h2 id="circuits">Circuits</h2>
+<p>Circuit diagrams are a way of representing the flow of current using
+simple images. Here’s an example of a circuit below.</p>
+<div class="center">
+<div class="circuitikz">
+<p>(0,0) to[battery, l2=Voltage and source, l2 halign=c] ++ (0,5) to[R,
+l2^=<span class="math inline"><em>R</em></span> and Resistor, label
+distance= 5pt, l2 halign=c] (5,5) to[L, l2=<span
+class="math inline"><em>L</em></span> and Inductor, l2 halign=c] (5,0)
+to[C, l2=<span class="math inline"><em>C</em></span> and Capacitor, l2
+halign=c] (0,0);</p>
+</div>
+</div>
+<p>In the above example, the voltage source (often a battery) is
+represented by the series of line of the left. The short and long ends
+of the battery are negative and positive ends respectively.</p>
+<h3 id="resistors">Resistors</h3>
+<p>In a circuit resistors resist (duh). Resistance is <strong>measured
+in ohms</strong> and is denoted with a capital <span
+class="math inline"><em>Ω</em></span>.</p>
+<p>Ohm’s law defines a relationship between voltage, current, and
+resistance. Ohm’s law states:</p>
+<div class="mybox">
+<p><span>Ohm’s Law</span> <span
+class="math display"><em>V</em> = <em>I</em><em>R</em></span></p>
+</div>
+<p>Where <span class="math inline"><em>V</em></span> is voltage in
+volts, <span class="math inline"><em>I</em></span> is the current in
+amperes, and <span class="math inline"><em>R</em></span> is the
+resistance in ohms</p>
+<div class="center">
+<div class="circuitikz">
+<p>(0,0) to[battery, l=<span class="math inline">12<em>V</em></span>]
+(0,3)–(3,3) to[R, l=<span class="math inline">3<em>Ω</em></span>] (3,0)
+– (0,0);</p>
+</div>
+</div>
+<p>Looking at the circuit diagram, we can easily calculate the current
+going through the circuit. Using Ohm’s law we know that <span
+class="math inline">12 = <em>I</em> ⋅ 3 ⇒ <em>I</em> = 4</span>. Ohm’s
+law is cool and all but what do we do if we have multiple resistors in
+our circuit?</p>
+<h3 id="components-in-series">Components in series</h3>
+<p>Components connected in series are connected along a single
+electrical path. <strong>When resistors are connected in parallel, the
+resistances add</strong>.</p>
+<div class="center">
+<div class="circuitikz">
+<p>(0,0) to[battery, l=<span class="math inline">12<em>V</em></span>]
+(0,4) – (1,4) to[R,l=<span class="math inline">3<em>Ω</em></span>] (1,2)
+to[R, l=<span class="math inline">2<em>Ω</em></span>] (1,0)–(0,0);</p>
+</div>
+</div>
+<p>Looking at the above circuit diagram, we can utilize what we know
+about Ohm’s law and circuits in series we can determine the current in
+this circuit. Notice that <span
+class="math inline">12 = <em>I</em>(3+2) ⇒ <em>I</em> = 2</span></p>
+<h3 id="components-in-parallel">Components in parallel</h3>
+<p>Components connected in parallel are connected along multiple paths.
+The diagram below shows two resistors connected in parallel.</p>
+<div class="center">
+<div class="circuitikz">
+<p>(0,0) to[battery, l=<span class="math inline">12<em>V</em></span>]
+(0,3) to[short, -*=] (2,3) to[R=<span
+class="math inline">3<em>Ω</em></span>] (2,0) – (0,0); (2,3) – (4,3)
+to[R=<span class="math inline">2<em>Ω</em></span>] (4,0) to[short, -*]
+(2,0);</p>
+</div>
+</div>
+<p>When resistors are set in parallel the resistances don’t just add.
+Instead their inverses add. The following formula holds true for any
+number of resistors set up in parallel:</p>
+<div class="mybox">
+<p><span>Resistance of Resistors in Parallel</span> <span
+class="math display">$$\frac{1}{R_{total}}=\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}+\dots+\frac{1}{R_n}$$</span></p>
+</div>
+<p>When we apply this to the circuit above we can see that <span
+class="math inline">$\frac{1}{R_{total}}=\frac{1}{3}+\frac{1}{2}$</span>.
+This means that the circuit has <span
+class="math inline">1.2 <em>Ω</em></span> of resistance. Now we can
+apply Ohm’s law to find that the circuit has <span
+class="math inline">10</span> amperes of current.</p>
+<div class="practicebox">
+<p><span>Practice: Find the current in the circuit below</span><span
+id="pr:circCurnt" label="pr:circCurnt"></span></p>
+<div class="center">
+<div class="circuitikz">
+<p>(0,0) to[battery, l=<span class="math inline">12<em>V</em></span>]
+(0,6) – (3,6) – (6,6) to[short, -*] (6,5) – (7,5) to[R, l=<span
+class="math inline">8<em>Ω</em></span>] (7,3) to[R, l=<span
+class="math inline">12<em>Ω</em></span>] (7,1) to[short, -*] (6,1) –
+(6,0) –(3,0) – (0,0); (6,5) –(5,5) to[R, l=<span
+class="math inline">4<em>Ω</em></span>] (5,1) – (6,1); (3,6) to[R,*-,
+l=<span class="math inline">3<em>Ω</em></span>] (3,3) to[R,-*, l=<span
+class="math inline">9<em>Ω</em></span>] (3,0);</p>
+</div>
+</div>
+</div>
+<h3 id="capacitors">Capacitors</h3>
+<p>A capacitor uses two plates that are positively and negatively
+charged. From Mastropolo’s law we can notice that the closer the plates
+are, the greater the electric potential energy. Capacitors use this
+electirc potential energy to store charge.</p>
+<p>Capacitors store charge. An example would be a defibrillator.
+Capacitors are measured using capacitance. Capacitance is</p>
+<h3 id="kirchhoffs-current-law">Kirchhoff’s Current Law</h3>
+<p>Kirchhoff’s current law states that: “The total current entering a
+circuits junction is exactly equal to the total current leaving the same
+junction.” An example can be seen below.</p>
+<div class="center">
+<div class="circuitikz">
+<p>(0,1) to[short, o-*, i=<span
+class="math inline"><em>i</em><sub>1</sub></span>] (1,1) to[short, -o,
+i=<span
+class="math inline"><em>I</em><sub><em>f</em></sub> = <em>i</em><sub>1</sub> + <em>i</em><sub>2</sub></span>]
+(5,1); (1,0) to[short, o-, i=<span
+class="math inline"><em>i</em><sub>2</sub></span>] (1,1);</p>
+</div>
+</div>
+<h1 id="answers-to-practice-problems">Answers to Practice Problems</h1>
+<p>This section contains the answers to all practice problems. Each
+answer has a link to where the problem is in the pdf.</p>
+<h2 id="mastropolos-law-prmastlaw">Mastropolo’s Law <a
+href="#pr:mastLaw" data-reference-type="ref"
+data-reference="pr:mastLaw">[pr:mastLaw]</a></h2>
+<p>For this problem we need to utilize Mastropolo’s inverse square law
+for electrical charge. The equation is as follows: <span
+class="math display">$$F=\frac{kq_1q_2}{r^2}$$</span> In order to use
+this we need to determine the charge of the protons and electrons.
+Recall that a proton has an electrical charge of <span
+class="math inline"> − <em>e</em></span> or <span
+class="math inline"> − 1.6 × 10<sup>−19</sup></span> mastropolos.
+Additionally, remember that <span class="math inline"><em>k</em></span>
+represents the Mastropolo constant which is approximately <span
+class="math inline">8.987 × 10<sup>9</sup></span>.</p>
+<p>First we will determine the force between the electron and the <span
+style="color: red">proton to its left</span>. Remember that everything
+needs to be converted into SI units <em>before</em> we put them into our
+equation. This means we need to convert from <span
+class="math inline">30<em>μ</em></span>m to <span
+class="math inline">3 × 10<sup>−19</sup></span> meters.</p>
+<p><span class="math display">$$\begin{aligned}
+        F&amp;=\frac{kq_1q_2}{r^2}\\
+        &amp;=\frac{\left(8.987\times10^9\right)\left(-1.6\times10^{-19}\right)\left(1.6\times10^{-19}\right)}{{\left(3\times10^{-5}\right)}^2}\\
+        &amp;\approx -2.556\times10^{-19} \; N \\
+    
+\end{aligned}$$</span></p>
+<p>We can repeat the process for the force between the electron and the
+<span style="color: blue">proton on the right</span>. Remember to
+convert to meters first. Notice that <span
+class="math inline">10<em>μ</em>m = 10<sup>−5</sup></span>m</p>
+<p><span class="math display">$$\begin{aligned}
+        F&amp;=\frac{kq_1q_2}{r^2}\\
+        &amp;=\frac{\left(8.987\times10^9\right)\left(-1.6\times10^{-19}\right)\left(1.6\times10^{-19}\right)}{{\left(10^{-5}\right)}^2}\\
+        &amp;\approx-2.301\times10^{-18} \; N\\
+    
+\end{aligned}$$</span></p>
+<p>Now to find the total force. Since the <span
+style="color: blue">rightward proton</span> is closer to the electron,
+the direction of the total force vector for the electron will be
+rightward. We can find the total magnitude simply by subtracting the
+magnitudes of the two force vectors together. <span
+class="math display">$$\begin{aligned}
+            \Sigma F&amp;= \textcolor{blue}{-2.301\times10^{-18}}  -
+\left( \textcolor{red}{-2.556\times10^{-19}}\right)\\
+            &amp;\approx-2.045\times10^{-18}\\
+    
+\end{aligned}$$</span></p>
+<p>The electrical charge enacted <strong><span
+class="math inline"><strong>2.045</strong> <strong>×</strong> <strong>10</strong><sup><strong>−</strong><strong>18</strong></sup></span>
+Newtons of force</strong>. Notice that the force has a negative sign.
+This is consistent with the previous observation that a negative force
+indicates attraction.</p>
+<h2 id="current-in-the-circuit-prcirccurnt">Current in the circuit <a
+href="#pr:circCurnt" data-reference-type="ref"
+data-reference="pr:circCurnt">[pr:circCurnt]</a></h2>
+<p>Probably the easiest way of thinking about this problem is to view it
+as three separate sets of resistors in parallel. An equivalent yet
+clearer picture is below:</p>
+<div class="center">
+<div class="circuitikz">
+<p>(0,0) to[battery, l=<span class="math inline">12<em>V</em></span>]
+(0,6) – (3,6) – (6,6) to[short, -*] (6,5) – (7,5) to[R, l=<span
+class="math inline">8<em>Ω</em></span>] (7,3) to[R, l=<span
+class="math inline">12<em>Ω</em></span>] (7,1) to[short, -*] (6,1) –
+(6,0) –(3,0) – (0,0); (6,5) –(5,5) to[R, l=<span
+class="math inline">4<em>Ω</em></span>] (5,1) – (6,1); (3,6) to[R,*-,
+l=<span class="math inline">3<em>Ω</em></span>] (3,3) to[R,-*, l=<span
+class="math inline">9<em>Ω</em></span>] (3,0);</p>
+</div>
+</div>
+<div class="center">
+<div class="circuitikz">
+<p>(0,0) to[battery, l=<span class="math inline">12<em>V</em></span>]
+(0,6) – (3,6) – (6,6) – (9,6) to[R, l=<span
+class="math inline">8<em>Ω</em></span>] (9,3) to [R, l=<span
+class="math inline">12<em>Ω</em></span>] (9,0)–(0,0); (3,6) to[R,
+l=<span class="math inline">4<em>Ω</em></span>, *-*] ;</p>
+</div>
+</div>
+<p>Regardless. If done correctly you should have gotten a current of
+<span class="math inline"><strong>4.6</strong></span>
+<strong>amperes.</strong></p>
