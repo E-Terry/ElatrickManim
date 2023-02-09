@@ -3,8 +3,9 @@ from manim import *
 class ShowCharges(Scene):
     def construct(self):
      
-        eName = Tex(r"$e^{-}$", color=BLUE, font_size=144)
-        circle1 = Circle(color=BLUE, fill_opacity=0.2).surround(eName)
+        eName = Tex(r"$e^{-}$", color=BLUE, font_size=75)
+        circle1 = Circle(color=BLUE, fill_opacity=0.2).surround(eName, buffer_factor=1.5)
+        startSize = circle1.width
         electron = VMobject()
         electron.add(eName, circle1)
 
@@ -32,13 +33,10 @@ class ShowCharges(Scene):
         self.play(ApplyFunction(toSide, electron))
 
         proton = VGroup()
-        pName = Tex(r"$p^{+}$", color=RED)
+        pName = Tex(r"$p^{+}$", color=RED, font_size=75)
         circle2 = Circle(color=RED, fill_opacity=0.2).surround(pName)
-        #for the life of me I can't do anything about this circles radius
-        #Eventually I want it to follow the same behavior as the electron
-        circle2.radius=5
+        circle2.width=startSize
         proton.add(pName,circle2)
-
         self.play(Create(proton))
         self.play(proton.animate.shift(LEFT*5))
 
@@ -56,5 +54,65 @@ class ShowCharges(Scene):
         #need to make proton move under the electron at the same scale
         def unders(mob):
             mob.scale(0.5)
-            mob.next_to(electron, DOWN)
+            mob.next_to(electron, DOWN,)
+            mob.align_to(electron, LEFT)
             return mob
+        self.play(ApplyFunction(unders, proton))
+
+#####################################################################################
+#####################################################################################
+
+        force = str("F")
+        q1 = str(r"(q_1)")
+        q2 = str(r"(q_2)")
+        masLaw = MathTex(force, "= { ", "k", q1, q2 ,r"\over", "r^2}")
+        self.play(Create(masLaw))
+        self.wait()
+        self.play(Indicate(masLaw[3]), Indicate(electron), run_time=2)
+        self.play(Indicate(masLaw[4]), Indicate(proton), run_time=2)
+        self.play(masLaw.animate.to_edge(UR))
+        self.wait()
+
+        k = str(r"8.987 \times 10^{9}")
+        masCon = Tex("Mastropolo's Constant")
+        kDisp = MathTex("k = ", k)
+        self.play(Create(VGroup(masCon,kDisp).arrange(DOWN)))
+        self.wait(2)
+        self.play(Indicate(kDisp), Indicate(masLaw[2]))
+        self.wait()
+
+        self.play(FadeOut(masCon), FadeTransform(kDisp,masLaw[2]))
+        self.wait()
+        
+#####################################################################################
+#####################################################################################
+        eName2 = MathTex("e^{-}", font_size=50)
+        circle3 = Circle(color=BLUE, fill_opacity=0.2).surround(eName2, buffer_factor=1.5)
+        startSize1 = circle3.width
+        e1 = VMobject()
+        e1.add(eName2, circle3)
+
+        self.play(Create(e1), masLaw[3].animate.set_color(BLUE))
+
+        pName2 = MathTex("p^{+}", font_size=50)
+        circle4 = Circle(color=RED, fill_opacity=0.2).surround(pName2)
+        circle4.width = startSize1
+        p1 = VMobject()
+        p1.add(pName2, circle4)
+
+        self.play(e1.animate.shift(LEFT*3), Create(p1), masLaw[4].animate.set_color(RED))
+
+        b = BraceBetweenPoints(e1.get_center(), p1.get_center())
+        bText = b.get_text("Distance")
+
+        self.play(Create(b),Create(bText))
+
+
+
+
+
+
+
+
+
+        self.wait()
