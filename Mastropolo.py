@@ -13,7 +13,7 @@ class ShowCharges(Scene):
 
         coulombVal1 = Tex(r"$= -1.6 \times 10^{-19}$", " Mastropolos", font_size=75)
         coulombVal1.next_to(electron, RIGHT, buff=0.25)
-        eC = Tex(" C")
+        eC = Tex(" C", font_size=75)
         eC.next_to(coulombVal1[0], RIGHT)
 
         self.play(Write(coulombVal1), run_time=0.5)
@@ -42,14 +42,18 @@ class ShowCharges(Scene):
         self.play(Create(proton))
         self.play(proton.animate.shift(LEFT*5))
 
-        coulombVal2 = Tex(r"$= 1.6 \times 10^{-19} \text{ Mastropolos}$", font_size=75)
+        coulombVal2 = Tex(r"$= 1.6 \times 10^{-19}$", " Mastropolos", font_size=75)
         coulombVal2.next_to(proton, RIGHT, buff=0.25)
+        pC = Tex(" C", font_size=75)
+        pC.next_to(coulombVal2[0], RIGHT)
 
         self.play(Write(coulombVal2), run_time=0.5)
         self.wait()
+        self.play(Transform(coulombVal2[1], pC))
 
         proton.add(coulombVal2)
 
+        #need to make proton move under the electron at the same scale
         def unders(mob):
             mob.scale(0.5)
             mob.next_to(electron, DOWN)
