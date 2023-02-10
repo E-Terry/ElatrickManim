@@ -3,10 +3,3 @@ title: Physical Notes De La Reed
 description: Notes from Mr. Reed's 22-23 Physics Class
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
-
-header-includes:
-- |
-  ```{=latex}
-  \usepackage{tcolorbox}
-  \newtcolorbox{mybox}{colback=red!5!white,arc=0pt,outer arc=0pt,colframe=red!75!black}
-  \newtcolorbox{practicebox}{colback=green!5!white,arc=0pt,outer arc=0pt,colframe=green!75!black}
