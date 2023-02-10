@@ -18,7 +18,7 @@
       }
     };
   </script>
-  
+
 {% seo %}
     {% include head-custom.html %}
   </head>
@@ -32,7 +32,7 @@
             <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
           {% endif %}
 
-          <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
+          <h1 id="project_title"><a href="https://e-terry.github.io/ElatrickManim/index/">{{ site.title | default: site.github.repository_name }}</a></h1>
           <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
 
           {% if site.show_downloads %}
@@ -55,7 +55,7 @@
     <div id="footer_wrap" class="outer">
       <footer class="inner">
         {% if site.github.is_project_page %}
-        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a> and Patrick</p>
         {% endif %}
         <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
       </footer>
