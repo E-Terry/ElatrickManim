@@ -1,9 +1,11 @@
 from manim import *
 
-
-
-class CreateCircle(Scene):
+class Testing(Scene):
     def construct(self):
-        circle = Circle()  # create a circle
-        circle.set_fill(PINK, opacity=0.5)  # set the color and transparency
-        self.play(Create(circle))  # show the circle on screen
+
+        k= ValueTracker(2.12)
+        num = always_redraw(lambda : DecimalNumber().set_value(k.get_value()))
+
+        self.play(Create(num))
+        self.wait()
+        self.play(k.animate.set_value(0))

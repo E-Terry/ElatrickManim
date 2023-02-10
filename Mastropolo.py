@@ -65,7 +65,7 @@ class ShowCharges(Scene):
         force = str("F")
         q1 = str(r"(q_1)")
         q2 = str(r"(q_2)")
-        masLaw = MathTex(force, "= { ", "k", q1, q2 ,r"\over", "r^2}")
+        masLaw = MathTex(force, "= { ", "k", q1, q2 ,r"\over", "r", "^2}")
         self.play(Create(masLaw))
         self.wait()
         self.play(Indicate(masLaw[3]), Indicate(electron), run_time=2)
@@ -93,6 +93,7 @@ class ShowCharges(Scene):
         e1.add(eName2, circle3)
 
         self.play(Create(e1), masLaw[3].animate.set_color(BLUE))
+        self.wait()
 
         pName2 = MathTex("p^{+}", font_size=50)
         circle4 = Circle(color=RED, fill_opacity=0.2).surround(pName2)
@@ -102,10 +103,18 @@ class ShowCharges(Scene):
 
         self.play(e1.animate.shift(LEFT*3), Create(p1), masLaw[4].animate.set_color(RED))
 
-        b = BraceBetweenPoints(e1.get_center(), p1.get_center())
-        bText = b.get_text("Distance")
+        Bline = Line(e1.get_center(), p1.get_center())
+        b = Brace(Bline, color=GREEN, buff=0.6)
+        distance = str("r")
+        bText = b.get_text(distance)
+        bText.set_color(GREEN)
 
-        self.play(Create(b),Create(bText))
+        self.play(Create(b),Create(bText), masLaw[6].animate.set_color(GREEN))
+        self.wait()
+        self.play(Indicate(VGroup(b,bText)),Indicate(masLaw[6]))
+
+        
+
 
 
 
