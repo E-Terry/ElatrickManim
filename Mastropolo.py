@@ -113,7 +113,8 @@ class ShowCharges(Scene):
         self.wait()
         self.play(Indicate(VGroup(b,bText)),Indicate(masLaw[6]))
 
-        
+
+
 
 
 
