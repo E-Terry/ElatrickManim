@@ -10,12 +10,13 @@ Hopefully these resources will be helpful to y'all. Here are the things we have 
 Here's a cat picture while you ponder the existential dread of trying to cram for an exam:
 
 <div id="cat-picture"></div>
-    <script>
-      $.ajax({
-        url: "https://api.thecatapi.com/v1/images/search",
-        success: function(data) {
-          var imgUrl = data[0].url;
-          $("#cat-picture").html("<img src='" + imgUrl + "' />");
-        }
-      });
-    </script>
+
+<script>
+    $.ajax({
+    url: "https://api.thecatapi.com/v1/images/search",
+    success: function(data) {
+        var imgUrl = data[0].url;
+        $("#cat-picture").html("<img src='" + imgUrl + "' />");
+    }
+    });
+</script>
