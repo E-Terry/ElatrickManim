@@ -7,7 +7,9 @@ Hopefully these resources will be helpful to y'all. Here are the things we have 
 - [Beautiful Notes](https://e-terry.github.io/ElatrickManim/notes/)
 - [Mesmerizing Animations](https://e-terry.github.io/ElatrickManim/animations/)
 
-Here's a cat picture while you ponder the existential dread of trying to cram for an exam:
+Here's a cat picture and a dog picture while you ponder the existential dread of trying to cram for an exam:
+
+<div id="pictues">
 
 <div id="cat-picture"></div>
 
@@ -20,3 +22,17 @@ Here's a cat picture while you ponder the existential dread of trying to cram fo
     }
     });
 </script>
+
+<div id="dog-picture"></div>
+
+<script>
+    $.ajax({
+    url: "https://api.thedogapi.com/v1/images/search",
+    success: function(data) {
+        var imgUrl = data[0].url;
+        $("#dog-picture").html("<img src='" + imgUrl + "' />");
+    }
+    });
+</script>
+
+</div>
