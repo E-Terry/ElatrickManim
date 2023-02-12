@@ -1,5 +1,5 @@
 ---
-title: "Index of Resources"
+title: "Index"
 ---
 
 # Mr. Reed's Physics Class Documentation
