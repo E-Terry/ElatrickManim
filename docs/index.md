@@ -1,6 +1,5 @@
 ---
 title: "Index of Resources"
-permalink: /index/
 ---
 
 # Mr. Reed's Physics Class Documentation

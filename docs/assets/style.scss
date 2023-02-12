@@ -1,4 +1,21 @@
----
----
+a {
+    color: black;
+    text-decoration: none;
+  }
+
+.header-buttons {
+    display: flex;
+  }
+  
+  .header-buttons button {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.3);
+  }
 
 @import "jekyll-theme-slate";
