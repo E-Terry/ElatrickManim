@@ -11,7 +11,7 @@ Here's a cat picture and a dog picture while you ponder the existential dread of
 
 <div id="pictues" style="display:flex; width:50vw; height:50vh">
 
-<div id="cat-picture" style="flex:1;width:75vw; height:75vh"></div>
+<div id="cat-picture" style="flex:1;width:50vw; height:50vh"></div>
 
 <script>
     $.ajax({
@@ -23,7 +23,7 @@ Here's a cat picture and a dog picture while you ponder the existential dread of
     });
 </script>
 
-<div id="dog-picture" style="flex:1;width:75vw; height:75vh"></div>
+<div id="dog-picture" style="flex:1;width:50vw; height:50vh"></div>
 
 <script>
     $.ajax({
