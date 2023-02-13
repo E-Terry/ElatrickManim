@@ -18,7 +18,7 @@ Here's a cat picture and a dog picture while you ponder the existential dread of
     url: "https://api.thecatapi.com/v1/images/search",
     success: function(data) {
         var imgUrl = data[0].url;
-        $("#cat-picture").html("<img src='" + imgUrl + "' style=\"max-width:100%; height:auto; max-height:100% \" />");
+        $("#cat-picture").html("<img src='" + imgUrl + "' style=\"max-width:100%; height:auto; max-height:100%; margin: 0px \" />");
     }
     });
 </script>
@@ -30,7 +30,7 @@ Here's a cat picture and a dog picture while you ponder the existential dread of
     url: "https://api.thedogapi.com/v1/images/search",
     success: function(data) {
         var imgUrl = data[0].url;
-        $("#dog-picture").html("<img src='" + imgUrl + "' style=\"max-width:100%; height:auto; max-height:100% \" />");
+        $("#dog-picture").html("<img src='" + imgUrl + "' style=\"max-width:100%; height:auto; max-height:100%; margin: 0px \" />");
     }
     });
 </script>
