@@ -9,7 +9,7 @@ Hopefully these resources will be helpful to y'all. Here are the things we have 
 
 Here's a cat picture and a dog picture while you ponder the existential dread of trying to cram for an exam:
 
-<div id="pictues" style="display:flex; max-width:25%;max-height:25%">
+<div id="pictues" style="display:flex; width:25%;height:25%">
 
 <div id="cat-picture" style="flex:1;width:10%"></div>
 
@@ -23,7 +23,7 @@ Here's a cat picture and a dog picture while you ponder the existential dread of
     });
 </script>
 
-<div id="dog-picture" style="flex:1;max-width:10%"></div>
+<div id="dog-picture" style="flex:1;width:10%"></div>
 
 <script>
     $.ajax({
