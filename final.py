@@ -23,17 +23,35 @@ class testing2(Scene):
 
 class testing3(Scene):
     def construct(self):
-        d1 = Dot(color=BLUE).shift(RIGHT*2)
-        d2 = Dot(color=RED)
-        tracker = ValueTracker(d1.get_center())
-        ln = Line(d1.get_center(), d2.get_center())
-        all = VMobject()
-        all.add(d2, ln)
-        all.add_updater(
-            lambda x: x.set_x(tracker.get_value())
-            )
 
-        self.add(d1,all,tracker)
+        eName2 = MathTex("e^{-}", font_size=50).shift(LEFT*2)
+        circle3 = Circle(color=BLUE, fill_opacity=0.2).surround(eName2, buffer_factor=1.5)
+        startSize1 = circle3.width
+        e1 = VMobject()
+        e1.add(eName2, circle3)
+
+        pName2 = MathTex("p^{+}", font_size=50).shift(RIGHT*2)
+        circle4 = Circle(color=RED, fill_opacity=0.2).surround(pName2)
+        circle4.width = startSize1
+        p1 = VMobject()
+        p1.add(pName2, circle4)
+ 
+        x1=ValueTracker(2)
+        x2=ValueTracker(-2)
+        e1.add_updater(lambda z: z.set_x(x1.get_value()))
+        p1.add_updater(lambda z: z.set_x(x2.get_value()))
+
+        b = Brace(Line(e1.get_center(),p1.get_center()), color=GREEN, buff=0.6)
+        b.add_updater(lambda z: z.become(Brace(Line(e1.get_center(),p1.get_center()), color=GREEN, buff=0.6)))
+        distance = str("r")
+        bText = b.get_text(distance).add_updater(lambda z: z.become(b.get_text(distance).set_color(GREEN)))
+
+        self.add(e1, p1, b, bText)
+        self.play(x1.animate.set_value(5))
+        self.play(x2.animate.set_value(-3))
         self.wait()
-        tracker.add_updater(lambda mobject, dt: mobject.increment_value(dt))
-        self.wait()
+
+
+
+
+

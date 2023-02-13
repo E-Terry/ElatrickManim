@@ -20,7 +20,6 @@ class ShowCharges(Scene):
         self.play(Write(coulombVal1), run_time=0.5)
         self.wait()
 
-        #I got the "Mastroplos" to change to a "C" but I did it in probably the worst way possible
         self.play(Transform(coulombVal1[1], eC))
 
         electron.add(coulombVal1)
@@ -51,7 +50,6 @@ class ShowCharges(Scene):
 
         proton.add(coulombVal2)
 
-        #need to make proton move under the electron at the same scale
         def unders(mob):
             mob.scale(0.5)
             mob.next_to(electron, DOWN,)
@@ -78,7 +76,7 @@ class ShowCharges(Scene):
         kDisp = MathTex("k = ", k)
         self.play(Create(VGroup(masCon,kDisp).arrange(DOWN)))
         self.wait(2)
-        self.play(Indicate(kDisp), Indicate(masLaw[2]))
+        self.play(Indicate(kDisp), Indicate(masLaw[2]), run_time=2)
         self.wait()
 
         self.play(FadeOut(masCon), FadeTransform(kDisp,masLaw[2]))
@@ -86,22 +84,20 @@ class ShowCharges(Scene):
         
 #####################################################################################
 #####################################################################################
-        eName2 = MathTex("e^{-}", font_size=50)
+        eName2 = MathTex("e^{-}", font_size=50).shift(LEFT*2)
         circle3 = Circle(color=BLUE, fill_opacity=0.2).surround(eName2, buffer_factor=1.5)
         startSize1 = circle3.width
         e1 = VMobject()
         e1.add(eName2, circle3)
 
-        self.play(Create(e1), masLaw[3].animate.set_color(BLUE))
-        self.wait()
-
-        pName2 = MathTex("p^{+}", font_size=50)
+        pName2 = MathTex("p^{+}", font_size=50).shift(RIGHT*2)
         circle4 = Circle(color=RED, fill_opacity=0.2).surround(pName2)
         circle4.width = startSize1
         p1 = VMobject()
         p1.add(pName2, circle4)
 
-        self.play(e1.animate.shift(LEFT*3), Create(p1), masLaw[4].animate.set_color(RED))
+        self.play(Create(p1), masLaw[4].animate.set_color(RED), Create(e1), masLaw[3].animate.set_color(BLUE))
+        self.wait()
 
         Bline = Line(e1.get_center(), p1.get_center())
         b = Brace(Bline, color=GREEN, buff=0.6)
@@ -111,7 +107,12 @@ class ShowCharges(Scene):
 
         self.play(Create(b),Create(bText), masLaw[6].animate.set_color(GREEN))
         self.wait()
-        self.play(Indicate(VGroup(b,bText)),Indicate(masLaw[6]))
+        self.play(Indicate(VGroup(b,bText)),Indicate(masLaw[6]), run_time=2)
+
+#####################################################################################
+#####################################################################################
+
+        
 
 
 
