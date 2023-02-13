@@ -9,7 +9,7 @@ Hopefully these resources will be helpful to y'all. Here are the things we have 
 
 Here's a cat picture and a dog picture while you ponder the existential dread of trying to cram for an exam:
 
-<div id="pictues" style="display:flex; width:50vw; height:50vh">
+<div id="pictues" style="display:flex; width:50vw; height:50vh;padding=5%">
 
 <div id="cat-picture" style="flex:1;width:50vw; height:50vh"></div>
 
