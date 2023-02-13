@@ -9,9 +9,9 @@ Hopefully these resources will be helpful to y'all. Here are the things we have 
 
 Here's a cat picture and a dog picture while you ponder the existential dread of trying to cram for an exam:
 
-<div id="pictues" style="display:flex">
+<div id="pictues" style="display:flex; width:50vw; height:50vh">
 
-<div id="cat-picture" style="flex:1;width:15vw; height:15vh"></div>
+<div id="cat-picture" style="flex:1;width:25vw; height:25vh"></div>
 
 <script>
     $.ajax({
@@ -23,7 +23,7 @@ Here's a cat picture and a dog picture while you ponder the existential dread of
     });
 </script>
 
-<div id="dog-picture" style="flex:1;width:15vw; height:15vh"></div>
+<div id="dog-picture" style="flex:1;width:25vw; height:25vh"></div>
 
 <script>
     $.ajax({
