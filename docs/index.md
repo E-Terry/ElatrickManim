@@ -9,28 +9,28 @@ Hopefully these resources will be helpful to y'all. Here are the things we have 
 
 Here's a cat picture and a dog picture while you ponder the existential dread of trying to cram for an exam:
 
-<div id="pictues" style="display:flex; width:50vw; height:50vh;padding=5%">
+<div id="pictues" style="display:flex; width:100%; height:100%;padding=5%">
 
-<div id="cat-picture" style="flex:1;width:50vw; height:50vh"></div>
+<div id="cat-picture" style="flex:1;width:50%; height:50%"></div>
 
 <script>
     $.ajax({
     url: "https://api.thecatapi.com/v1/images/search",
     success: function(data) {
         var imgUrl = data[0].url;
-        $("#cat-picture").html("<img src='" + imgUrl + "' style=\"max-width:100%; height:auto; max-height:100%; margin: 0px \" />");
+        $("#cat-picture").html("<img src='" + imgUrl + "' style=\"max-width:75%; height:auto; max-height:100%; margin: 1% \" />");
     }
     });
 </script>
 
-<div id="dog-picture" style="flex:1;width:50vw; height:50vh"></div>
+<div id="dog-picture" style="flex:1;width:50%; height:50%"></div>
 
 <script>
     $.ajax({
     url: "https://api.thedogapi.com/v1/images/search",
     success: function(data) {
         var imgUrl = data[0].url;
-        $("#dog-picture").html("<img src='" + imgUrl + "' style=\"max-width:100%; height:auto; max-height:100%; margin: 0px;padding: 10px \" />");
+        $("#dog-picture").html("<img src='" + imgUrl + "' style=\"max-width:75%; height:auto; max-height:100%; margin:1% \" />");
     }
     });
 </script>
