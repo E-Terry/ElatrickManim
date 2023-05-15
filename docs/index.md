@@ -4,8 +4,8 @@ title: "Index"
 
 # Mr. Reed's Physics Class Documentation
 Hopefully these resources will be helpful to y'all. Here are the things we have created:
-- [Beautiful Notes](https://e-terry.github.io/rkitty-physics/notes/)
-- [Mesmerizing Animations](https://e-terry.github.io/rkitty-physics/animations/)
+- [Beautiful Notes](https://e-terry.github.io/mr-reed-physics/notes/)
+- [Mesmerizing Animations](https://e-terry.github.io/mr-reed-physics/animations/)
 
 Here's a cat picture and a dog picture while you ponder the existential dread of trying to cram for an exam:
 
