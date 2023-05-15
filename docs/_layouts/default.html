@@ -2,6 +2,15 @@
 <html lang="{{ site.lang | default: "en-US" }}">
 
   <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4KG6N17F8E"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-4KG6N17F8E');
+    </script>
+    
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,maximum-scale=2">
@@ -22,7 +31,7 @@
   </script>
 
 {% seo %}
-    {% include head-custom.html %}
+
   </head>
 
   <body>
@@ -34,12 +43,12 @@
             <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
           {% endif %}
 
-          <h1 id="project_title"><a href="https://e-terry.github.io/ElatrickManim/">{{ site.title | default: site.github.repository_name }}</a></h1>
+          <h1 id="project_title"><a href="https://e-terry.github.io/rkitty-physics/">{{ site.title | default: site.github.repository_name }}</a></h1>
           <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
           <div class="header-buttons">
-            <button onclick="window.location='https://e-terry.github.io/ElatrickManim/'">Index</button>
-            <button onclick="window.location='https://e-terry.github.io/ElatrickManim/notes/'">Notes</button>
-            <button onclick="window.location='https://e-terry.github.io/ElatrickManim/animations/'">Animations</button>
+            <button onclick="window.location='https://e-terry.github.io/rkitty-physics/'">Index</button>
+            <button onclick="window.location='https://e-terry.github.io/rkitty-physics/notes/'">Notes</button>
+            <button onclick="window.location='https://e-terry.github.io/rkitty-physics/animations/'">Animations</button>
           </div>
 
           {% if site.show_downloads %}

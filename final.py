@@ -1,4 +1,5 @@
 from manim import *
+from math import *
 
 class Testing(Scene):
     def construct(self):
@@ -45,12 +46,18 @@ class testing3(Scene):
         b.add_updater(lambda z: z.become(Brace(Line(e1.get_center(),p1.get_center()), color=GREEN, buff=0.6)))
         distance = str("r")
         bText = b.get_text(distance).add_updater(lambda z: z.become(b.get_text(distance).set_color(GREEN)))
-
+        
+        def getDistVal():
+            return abs(e1.get_center()[0] - p1.get_center()[0])
+        
+        distTex = always_redraw(lambda : MathTex(str(round(getDistVal(),2))+ r"\mu m").to_edge(UR))
+        
+        
+        self.add(distTex)
         self.add(e1, p1, b, bText)
         self.play(x1.animate.set_value(5))
         self.play(x2.animate.set_value(-3))
         self.wait()
-
 
 
 
